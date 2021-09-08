@@ -1,0 +1,25 @@
+{
+  "name": "@oneserv/phpstan-ruleset",
+  "version": "1.0.0",
+  "description": "An opinionated ruleset for PHPStan to enforce Oneserv Coding Standards.",
+  "scripts": {
+    "release": "standard-version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oneserv/phpstan-ruleset.git"
+  },
+  "author": {
+    "name": "Timon Heuser",
+    "email": "heuser@bueromoebel-experte.de",
+    "url": "https://github.com/oneserv"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oneserv/phpstan-ruleset/issues"
+  },
+  "homepage": "https://github.com/oneserv/phpstan-ruleset#readme",
+  "devDependencies": {
+    "standard-version": "^9.3.1"
+  }
+}
