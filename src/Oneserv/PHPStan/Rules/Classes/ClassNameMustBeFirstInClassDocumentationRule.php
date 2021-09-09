@@ -16,20 +16,19 @@ use Safe\Exceptions\StringsException;
 use function Safe\sprintf;
 
 /**
- * Class ClassDocumentationIsRequiredRule
+ * Class ClassNameMustBeFirstInClassDocumentationRule
  *
- * @see \Oneserv\PHPStan\Rules\Classes\ClassDocumentationIsRequiredRuleTest
+ * @see \Oneserv\PHPStan\Rules\Classes\ClassNameMustBeFirstInClassDocumentationRuleTest
  * @implements Rule<Class_>
  */
-final class ClassDocumentationIsRequiredRule implements Rule
+final class ClassNameMustBeFirstInClassDocumentationRule implements Rule
 {
     private ClassHelper $classHelper;
 
     private DocCommentHelper $docCommentHelper;
 
-
     /**
-     * ClassDocumentationIsRequiredRule constructor.
+     * ClassNameMustBeFirstInClassDocumentationRule constructor.
      *
      * @param ClassHelper $classHelper
      * @param DocCommentHelper $docCommentHelper
@@ -59,28 +58,28 @@ final class ClassDocumentationIsRequiredRule implements Rule
             return [];
         }
 
-        if ($node->name === null) {
+        $className = $node->name;
+        if ($className === null) {
             throw new ShouldNotHappenException();
         }
+        $className = $className->name;
 
         $docComment = (string)$node->getDocComment();
-        $docComment = str_replace('/**', '', $docComment);
-        $docComment = str_replace('*/', '', $docComment);
-        $docComment = str_replace('*', '', $docComment);
         $docComment = $this->docCommentHelper->cleanUpDocComment($docComment);
-
-        if ($docComment === '') {
+        if (!str_starts_with($docComment, "/***Class$className")) {
             try {
                 return [
                     sprintf(
-                        'Class %s has no/an empty doc comment.',
-                        $node->name->name
+                        "The doc comment of class %s must start with \"Class %s\".",
+                        $className,
+                        $className,
                     ),
                 ];
             } catch (StringsException $exception) {
                 throw new ShouldNotHappenException();
             }
         }
+
         return [];
     }
 }

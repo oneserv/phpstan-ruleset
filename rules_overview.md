@@ -36,3 +36,34 @@ class SomeClass
     ...
 }
 ```
+
+## ClassNameMustBeFirstInClassDocumentationRule
+
+**Rule:** The top level documentation of a class MUST start with: "Class _classname_".\
+**Error text:** The doc comment of class %s must start with "Class %s".\
+**Class:**
+[`Oneserv\PHPStan\Rules\Classes\ClassNameMustBeFirstInClassDocumentationRule`](src/Oneserv/PHPStan/Rules/Classes/ClassNameMustBeFirstInClassDocumentationRule.php)
+
+### Invalid :x:
+
+```php
+/**
+ * Some text 
+ */
+class SomeClass
+{
+    ...
+}
+```
+
+### Valid :white_check_mark:
+
+```php
+/**
+ * Class SomeClass
+ */
+class SomeClass
+{
+    ...
+}
+```

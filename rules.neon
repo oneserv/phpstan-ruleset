@@ -1,6 +1,9 @@
 services:
     -
         class: Oneserv\PHPStan\Services\ClassHelper
+    -
+        class: Oneserv\PHPStan\Services\DocCommentHelper
 
 rules:
     - Oneserv\PHPStan\Rules\Classes\ClassDocumentationIsRequiredRule
+    - Oneserv\PHPStan\Rules\Classes\ClassNameMustBeFirstInClassDocumentationRule
