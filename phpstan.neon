@@ -6,3 +6,9 @@ parameters:
     excludePaths:
         - tests/*/data/*
         - tests/bootstrap.php
+    ignoreErrors:
+    # NoExtendsRule
+    - '#Class .* is not allowed to extend "PHPStan\\Testing\\RuleTestCase"#'
+    # There is an error with final classes,
+    # see https://github.com/phpstan/phpstan-phpunit/issues/85 and https://github.com/phpstan/phpstan/issues/3854
+    - '#.*PHPUnit\\Framework\\MockObject\\MockObject.*#'

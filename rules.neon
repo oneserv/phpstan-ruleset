@@ -1,0 +1,6 @@
+services:
+    -
+        class: Oneserv\PHPStan\Services\ClassHelper
+
+rules:
+    - Oneserv\PHPStan\Rules\Classes\ClassDocumentationIsRequiredRule
