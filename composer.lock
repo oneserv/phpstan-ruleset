@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5fcd29d022d68daa8d19f3750b825b46",
+    "content-hash": "2f6600dd4f359c96ed1c5755fbbb8e71",
     "packages": [
         {
             "name": "doctrine/instantiator",
@@ -2701,23 +2701,27 @@
         },
         {
             "name": "oneserv/phpcs-rules",
-            "version": "v1.2.0",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oneserv/phpcs-rules.git",
-                "reference": "567a0f61177f1f28b9d0b07fbc981a7e126fd63e"
+                "reference": "c4f991889172c9f44892abe40ca982ddc93fa6a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oneserv/phpcs-rules/zipball/567a0f61177f1f28b9d0b07fbc981a7e126fd63e",
-                "reference": "567a0f61177f1f28b9d0b07fbc981a7e126fd63e",
+                "url": "https://api.github.com/repos/oneserv/phpcs-rules/zipball/c4f991889172c9f44892abe40ca982ddc93fa6a2",
+                "reference": "c4f991889172c9f44892abe40ca982ddc93fa6a2",
                 "shasum": ""
             },
             "require": {
                 "dealerdirect/phpcodesniffer-composer-installer": "0.*",
-                "php": "^7.4",
+                "php": "^7.4|^8.0",
                 "phpcompatibility/php-compatibility": "^9.3",
                 "squizlabs/php_codesniffer": "^3.6"
+            },
+            "require-dev": {
+                "madewithlove/license-checker": "^0.10.0",
+                "roave/security-advisories": "@dev"
             },
             "type": "phpcodesniffer-standard",
             "notification-url": "https://packagist.org/downloads/",
@@ -2739,9 +2743,9 @@
             ],
             "support": {
                 "issues": "https://github.com/oneserv/phpcs-rules/issues",
-                "source": "https://github.com/oneserv/phpcs-rules/tree/v1.2.0"
+                "source": "https://github.com/oneserv/phpcs-rules/tree/v1.3.0"
             },
-            "time": "2021-09-08T12:44:15+00:00"
+            "time": "2021-09-10T09:32:18+00:00"
         },
         {
             "name": "pdepend/pdepend",
@@ -4863,7 +4867,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.4"
+        "php": "^7.4|^8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.1.0"
