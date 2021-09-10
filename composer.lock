@@ -2701,16 +2701,16 @@
         },
         {
             "name": "oneserv/phpcs-rules",
-            "version": "v1.3.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oneserv/phpcs-rules.git",
-                "reference": "c4f991889172c9f44892abe40ca982ddc93fa6a2"
+                "reference": "5afdcc0f5bb4d687414edeadcb3328b840a05cef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oneserv/phpcs-rules/zipball/c4f991889172c9f44892abe40ca982ddc93fa6a2",
-                "reference": "c4f991889172c9f44892abe40ca982ddc93fa6a2",
+                "url": "https://api.github.com/repos/oneserv/phpcs-rules/zipball/5afdcc0f5bb4d687414edeadcb3328b840a05cef",
+                "reference": "5afdcc0f5bb4d687414edeadcb3328b840a05cef",
                 "shasum": ""
             },
             "require": {
@@ -2743,9 +2743,9 @@
             ],
             "support": {
                 "issues": "https://github.com/oneserv/phpcs-rules/issues",
-                "source": "https://github.com/oneserv/phpcs-rules/tree/v1.3.0"
+                "source": "https://github.com/oneserv/phpcs-rules/tree/v1.4.0"
             },
-            "time": "2021-09-10T09:32:18+00:00"
+            "time": "2021-09-10T09:40:11+00:00"
         },
         {
             "name": "pdepend/pdepend",
