@@ -18,7 +18,7 @@ use function Safe\sprintf;
 /**
  * Class ClassNameMustBeFirstInClassDocumentationRule
  *
- * @see \Oneserv\PHPStan\Rules\Classes\ClassNameMustBeFirstInClassDocumentationRuleTest
+ * @see \Tests\Oneserv\PHPStan\Rules\Classes\ClassNameMustBeFirstInClassDocumentationRuleTest
  * @implements Rule<Class_>
  */
 final class ClassNameMustBeFirstInClassDocumentationRule implements Rule

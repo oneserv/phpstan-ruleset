@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Oneserv\PHPStan\Services;
+namespace Tests\Oneserv\PHPStan\Services;
 
+use Oneserv\PHPStan\Services\ClassHelper;
 use PhpParser\Node\Name;
 use PhpParser\Node\Stmt\Class_;
 use PHPUnit\Framework\MockObject\MockObject;

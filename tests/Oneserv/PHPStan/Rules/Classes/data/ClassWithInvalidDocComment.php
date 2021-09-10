@@ -1,6 +1,6 @@
 <?php
 
-namespace Oneserv\PHPStan\Rules\Classes\data;
+namespace Tests\Oneserv\PHPStan\Rules\Classes\data;
 
 /**
  * Invalid

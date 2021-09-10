@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Oneserv\PHPStan\Services;
+namespace Tests\Oneserv\PHPStan\Services;
 
+use Oneserv\PHPStan\Services\DocCommentHelper;
 use PHPStan\ShouldNotHappenException;
 use PHPUnit\Framework\TestCase;
 

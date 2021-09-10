@@ -12,7 +12,7 @@ use function Safe\preg_replace;
 /**
  * Class DocCommentHelper
  *
- * @see \Oneserv\PHPStan\Services\DocCommentHelperTest
+ * @see \Tests\Oneserv\PHPStan\Services\DocCommentHelperTest
  */
 final class DocCommentHelper
 {

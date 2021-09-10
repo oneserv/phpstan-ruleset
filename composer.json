@@ -10,7 +10,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Oneserv\\PHPStan\\": "tests/Oneserv/PHPStan"
+      "Tests\\": "tests"
     }
   },
   "authors": [

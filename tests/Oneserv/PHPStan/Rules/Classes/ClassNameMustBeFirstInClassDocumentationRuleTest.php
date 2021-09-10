@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Oneserv\PHPStan\Rules\Classes;
+namespace Tests\Oneserv\PHPStan\Rules\Classes;
 
+use Oneserv\PHPStan\Rules\Classes\ClassNameMustBeFirstInClassDocumentationRule;
 use Oneserv\PHPStan\Services\ClassHelper;
 use Oneserv\PHPStan\Services\DocCommentHelper;
 use PHPStan\Rules\Rule;

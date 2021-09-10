@@ -18,7 +18,7 @@ use function Safe\sprintf;
 /**
  * Class ClassDocumentationIsRequiredRule
  *
- * @see \Oneserv\PHPStan\Rules\Classes\ClassDocumentationIsRequiredRuleTest
+ * @see \Tests\Oneserv\PHPStan\Rules\Classes\ClassDocumentationIsRequiredRuleTest
  * @implements Rule<Class_>
  */
 final class ClassDocumentationIsRequiredRule implements Rule

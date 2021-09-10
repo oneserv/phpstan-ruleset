@@ -9,7 +9,7 @@ use PhpParser\Node\Stmt\Class_;
 /**
  * Class ClassHelper
  *
- * @see \Oneserv\PHPStan\Services\ClassHelperTest
+ * @see \Tests\Oneserv\PHPStan\Services\ClassHelperTest
  */
 final class ClassHelper
 {
