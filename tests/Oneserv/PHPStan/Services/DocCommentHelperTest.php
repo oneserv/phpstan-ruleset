@@ -44,4 +44,25 @@ final class DocCommentHelperTest extends TestCase
             )
         );
     }
+
+    /**
+     * @see DocCommentHelper::removeCommentDelimiters()
+     */
+    public function testRemoveCommentDelimitersShouldReturnCleanDocComment(): void
+    {
+        self::assertSame(
+            '
+             test 123
+            
+             @see Class
+            ',
+            $this->docCommentHelper->removeCommentDelimiters(
+                '/**
+            * test 123
+            *
+            * @see Class
+            */'
+            )
+        );
+    }
 }
