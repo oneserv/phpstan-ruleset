@@ -50,6 +50,7 @@
   "scripts": {
     "phpcs": "vendor/bin/phpcs --standard=Oneserv src/ tests/ --ignore=*/tests/*/data,/tests/bootstrap.php",
     "phpmd": "vendor/bin/phpmd src/,tests/ ansi phpmd.xml",
-    "phpstan": "vendor/bin/phpstan analyse"
+    "phpstan": "vendor/bin/phpstan analyse",
+    "phpunit": "vendor/bin/phpunit"
   }
 }
