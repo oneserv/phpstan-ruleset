@@ -31,7 +31,7 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
       
-  static analysis:
+  static_analysis:
   
     runs-on: ubuntu-latest
     
