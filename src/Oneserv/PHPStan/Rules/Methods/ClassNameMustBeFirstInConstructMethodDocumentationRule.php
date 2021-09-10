@@ -71,7 +71,7 @@ final class ClassNameMustBeFirstInConstructMethodDocumentationRule implements Ru
             try {
                 return [
                     sprintf(
-                        'The __construct method of class %s must start with "%s constructor.".',
+                        'The doc comment of the __construct method of class %s must start with "%s constructor.".',
                         $className,
                         $className,
                     ),

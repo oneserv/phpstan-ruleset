@@ -71,7 +71,7 @@ class SomeClass
 ## ClassNameMustBeFirstInConstructMethodDocumentationRuleTest
 
 **Rule:** The documentation of a __construct method MUST start with: "_classname_ constructor.".\
-**Error text:** The __construct method of class %s must start with "%s constructor.".\
+**Error text:** The doc comment of the __construct method of class %s must start with "%s constructor.".\
 **Class:**
 [`Oneserv\PHPStan\Rules\Methods\ClassNameMustBeFirstInConstructMethodDocumentationRule`](src/Oneserv/PHPStan/Rules/Methods/ClassNameMustBeFirstInConstructMethodDocumentationRule.php)
 
