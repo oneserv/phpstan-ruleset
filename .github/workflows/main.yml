@@ -33,9 +33,8 @@ jobs:
       
   static_analysis:
   
-    needs: build
     runs-on: ubuntu-latest
     
     steps:
     - name: Run PHPStan
-      run: phpstan analyse
+      run: composer install --prefer-dist --no-progress && phpstan analyse
