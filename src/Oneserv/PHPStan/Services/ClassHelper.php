@@ -25,4 +25,14 @@ final class ClassHelper
 
         return true;
     }
+
+    /**
+     * @param string $fullyQualifiedNameSpace
+     * @return string
+     */
+    public function getClassNameFromFqn(string $fullyQualifiedNameSpace): string
+    {
+        $path = explode('\\', $fullyQualifiedNameSpace);
+        return array_pop($path);
+    }
 }

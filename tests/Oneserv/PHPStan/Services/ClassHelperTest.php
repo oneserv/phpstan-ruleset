@@ -66,4 +66,26 @@ final class ClassHelperTest extends TestCase
 
         self::assertTrue($this->classHelper->shouldClassBeAnalysed($this->nodeMock));
     }
+
+    /**
+     * @see ClassHelper::getClassNameFromFqn()
+     */
+    public function testGetClassNameFromFqnShouldReturnShortClassName(): void
+    {
+        self::assertSame(
+            'ClassHelperTest',
+            $this->classHelper->getClassNameFromFqn(ClassHelperTest::class)
+        );
+    }
+
+    /**
+     * @see ClassHelper::getClassNameFromFqn()
+     */
+    public function testGetClassNameFromFqnShouldReturnEmptyStringWithEmptyStringGiven(): void
+    {
+        self::assertSame(
+            '',
+            $this->classHelper->getClassNameFromFqn('')
+        );
+    }
 }
