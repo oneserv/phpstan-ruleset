@@ -10,7 +10,7 @@ use PHPStan\Rules\Rule;
 use PHPStan\Testing\RuleTestCase;
 
 /**
- * Class ClassDocumentationIsRequiredRuleTest
+ * Class ClassNameMustBeFirstInClassDocumentationRuleTest
  *
  * @see ClassNameMustBeFirstInClassDocumentationRule
  * @extends RuleTestCase<ClassNameMustBeFirstInClassDocumentationRule>
