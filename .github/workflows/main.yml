@@ -36,7 +36,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Run PHPStan
     - uses: actions/checkout@v2
-    - uses: php-actions/composer@v5 # or alternative dependency management
-    - uses: php-actions/phpstan@v2
+    - uses: php-actions/composer@v6
+    
+    - name: PHPStan
+      uses: php-actions/phpstan@v2
+      with:
+        configuration: phpstan.neon
