@@ -62,4 +62,4 @@ jobs:
         tools: phpstan
 
     - name: Run PHPStan
-      run: phpstan analyse src
+      run: phpstan analyse
