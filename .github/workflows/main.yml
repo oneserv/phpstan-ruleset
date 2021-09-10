@@ -1,4 +1,4 @@
-name: Main Actions
+name: PHP Composer
 
 on: [push, pull_request]
 
@@ -24,9 +24,3 @@ jobs:
 
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
-
-    - name: PHPUnit (graychen)
-      uses: Graychen/phpunit-action@v1.0.0
-      
-    - name: OSKAR-phpstan
-       uses: OskarStark/phpstan-ga@0.12.94
