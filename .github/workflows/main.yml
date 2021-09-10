@@ -1,6 +1,6 @@
 name: Main
 
-on: [push, pull_request]
+on: [ push, pull_request ]
 
 jobs:
   main:
@@ -8,36 +8,40 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: shivammathur/setup-php@v2
-      with:
-        php-version: '7.4'
+      - uses: actions/checkout@v2
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
 
-    - name: Validate composer.json and composer.lock
-      run: composer validate --strict
+      - name: Validate composer.json and composer.lock
+        run: composer validate --strict
 
-    - name: Cache Composer packages
-      id: composer-cache
-      uses: actions/cache@v2
-      with:
-        path: vendor
-        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-php-
-    - name: Install dependencies
-      run: composer install --prefer-dist --no-progress
-      
-    - name: Run phpunit
-      run: composer run-script phpunit
-      
-    - name: Run phpstan
-      run: composer run-script phpstan
+      - name: Cache Composer packages
+        id: composer-cache
+        uses: actions/cache@v2
+        with:
+          path: vendor
+          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-php-
 
-    - name: Run phpcs
-      run: composer run-script phpcs
-      
-    - name: Run phpmd
-      run: composer run-script phpmd
-      
-    - name: Security check
-      run: composer update --dry-run roave/security-advisories
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress
+
+      - name: Run phpunit
+        run: composer run-script phpunit
+
+      - name: Run phpstan
+        run: composer run-script phpstan
+
+      - name: Run phpcs
+        run: composer run-script phpcs
+
+      - name: Run phpmd
+        run: composer run-script phpmd
+
+      - name: Security check
+        run: composer update --dry-run roave/security-advisories
+
+      - name: License check
+        run: composer run-script license-check
