@@ -53,7 +53,7 @@
     "phpmd": "vendor/bin/phpmd src/,tests/ ansi phpmd.xml",
     "phpstan": "vendor/bin/phpstan analyse",
     "phpunit": "vendor/bin/phpunit",
-    "license-check": "vendor/bin/license-checker check",
+    "check-license": "vendor/bin/license-checker check",
     "post-install-cmd": [
       "[ $COMPOSER_DEV_MODE -eq 1 ] && vendor/bin/phpcs --config-set ignore_warnings_on_exit 1 || echo 0"
     ],

@@ -44,4 +44,4 @@ jobs:
         run: composer update --dry-run roave/security-advisories
 
       - name: License check
-        run: composer run-script license-check
+        run: composer run-script check-license
