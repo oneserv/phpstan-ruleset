@@ -58,7 +58,7 @@ final class ClassNameMustBeFirstInConstructMethodDocumentationRuleTest extends R
             [
                 [
                     // @phpcs:ignore Generic.Files.LineLength.TooLong
-                    'The __construct method of class ClassWithInvalidConstructDocComment must start with "ClassWithInvalidConstructDocComment constructor.".',
+                    'The doc comment of the __construct method of class ClassWithInvalidConstructDocComment must start with "ClassWithInvalidConstructDocComment constructor.".',
                     17,
                 ],
             ]
