@@ -2,12 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Oneserv\PHPStan\Rules\Classes;
+namespace Oneserv\PHPStan\Rules\Functions;
 
-use Oneserv\PHPStan\Services\ClassHelper;
 use Oneserv\PHPStan\Services\DocCommentHelper;
 use PhpParser\Node;
-use PhpParser\Node\Stmt\Class_;
+use PhpParser\Node\Stmt\Function_;
 use PHPStan\Analyser\Scope;
 use PHPStan\Rules\Rule;
 use PHPStan\ShouldNotHappenException;
@@ -16,26 +15,22 @@ use Safe\Exceptions\StringsException;
 use function Safe\sprintf;
 
 /**
- * Class ClassDocumentationIsRequiredRule
+ * Class FunctionDocumentationIsRequiredRule
  *
- * @see \Tests\Oneserv\PHPStan\Rules\Classes\ClassDocumentationIsRequiredRuleTest
- * @implements Rule<Class_>
+ * @implements Rule<Function_>
+ * @see \Tests\Oneserv\PHPStan\Rules\Functions\FunctionDocumentationIsRequiredRuleTest
  */
-final class ClassDocumentationIsRequiredRule implements Rule
+final class FunctionDocumentationIsRequiredRule implements Rule
 {
-    private ClassHelper $classHelper;
-
     private DocCommentHelper $docCommentHelper;
 
     /**
-     * ClassDocumentationIsRequiredRule constructor.
+     * FunctionDocumentationIsRequiredRule constructor.
      *
-     * @param ClassHelper $classHelper
      * @param DocCommentHelper $docCommentHelper
      */
-    public function __construct(ClassHelper $classHelper, DocCommentHelper $docCommentHelper)
+    public function __construct(DocCommentHelper $docCommentHelper)
     {
-        $this->classHelper = $classHelper;
         $this->docCommentHelper = $docCommentHelper;
     }
 
@@ -44,7 +39,7 @@ final class ClassDocumentationIsRequiredRule implements Rule
      */
     public function getNodeType(): string
     {
-        return Class_::class;
+        return Function_::class;
     }
 
     /**
@@ -53,24 +48,15 @@ final class ClassDocumentationIsRequiredRule implements Rule
      */
     public function processNode(Node $node, Scope $scope): array
     {
-        /** @var Class_ $node */
-        if (!$this->classHelper->shouldClassBeAnalysed($node)) {
-            return [];
-        }
-
-        if ($node->name === null) {
-            throw new ShouldNotHappenException();
-        }
-
+        /** @var Function_ $node */
         $docComment = (string)$node->getDocComment();
         $docComment = $this->docCommentHelper->removeCommentDelimiters($docComment);
         $docComment = $this->docCommentHelper->cleanUpDocComment($docComment);
-
         if ($docComment === '') {
             try {
                 return [
                     sprintf(
-                        'Class %s has no/an empty doc comment.',
+                        'Function %s has no/an empty doc comment.',
                         $node->name->name
                     ),
                 ];

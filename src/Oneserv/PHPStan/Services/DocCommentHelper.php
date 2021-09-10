@@ -35,4 +35,15 @@ final class DocCommentHelper
             );
         }
     }
+
+    /**
+     * @param string $docComment
+     * @return string
+     */
+    public function removeCommentDelimiters(string $docComment): string
+    {
+        $docComment = str_replace('/**', '', $docComment);
+        $docComment = str_replace('*/', '', $docComment);
+        return str_replace('*', '', $docComment);
+    }
 }
