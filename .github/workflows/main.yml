@@ -49,3 +49,17 @@ jobs:
       uses: php-actions/phpstan@v2
       with:
         configuration: phpstan.neon
+  
+  test:
+  
+    runs-on: ubuntu-latest
+  
+    steps:
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4'
+        tools: phpstan
+
+    - name: Run PHPStan
+      run: phpstan analyse src
