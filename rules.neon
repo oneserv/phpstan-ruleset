@@ -8,4 +8,5 @@ rules:
     - Oneserv\PHPStan\Rules\Classes\ClassDocumentationIsRequiredRule
     - Oneserv\PHPStan\Rules\Classes\ClassNameMustBeFirstInClassDocumentationRule
     - Oneserv\PHPStan\Rules\Methods\MethodDocumentationIsRequiredRule
+    - Oneserv\PHPStan\Rules\Methods\ClassNameMustBeFirstInConstructMethodDocumentationRule
     - Oneserv\PHPStan\Rules\Functions\FunctionDocumentationIsRequiredRule
