@@ -14,6 +14,7 @@ jobs:
       uses: shivammathur/setup-php@v2
       with:
         php-version: 7.4
+        tools: phpstan
 
     - name: Validate composer.json and composer.lock
       run: composer validate --strict
@@ -29,3 +30,11 @@ jobs:
 
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
+      
+  static analysis:
+  
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Run PHPStan
+      run: phpstan analyse
