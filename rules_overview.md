@@ -67,3 +67,61 @@ class SomeClass
     ...
 }
 ```
+
+## FunctionDocumentationIsRequiredRule
+
+**Rule:** A documentation MUST be provided for functions.\
+**Error text:** Function %s has no/an empty doc comment.\
+**Class:**
+[`Oneserv\PHPStan\Rules\Functions\FunctionDocumentationIsRequiredRule`](src/Oneserv/PHPStan/Rules/Functions/FunctionDocumentationIsRequiredRule.php)
+
+### Invalid :x:
+
+```php
+function someFunction() {
+
+}
+```
+
+### Valid :white_check_mark:
+
+```php
+/**
+ * Some documentation.
+ */
+ function someFunction() {
+ 
+ }
+```
+
+## MethodDocumentationIsRequiredRule
+
+**Rule:** A documentation MUST be provided for methods.\
+**Error text:** Method %s has no/an empty doc comment.\
+**Class:**
+[`Oneserv\PHPStan\Rules\Methods\MethodDocumentationIsRequiredRule`](src/Oneserv/PHPStan/Rules/Methods/MethodDocumentationIsRequiredRule.php)
+
+### Invalid :x:
+
+```php
+class SomeClass
+{
+    function someFunction() {
+    
+    }
+}
+```
+
+### Valid :white_check_mark:
+
+```php
+class SomeClass
+{
+    /**
+     * Some documentation.
+     */
+     function someFunction() {
+    
+    }
+}
+```
