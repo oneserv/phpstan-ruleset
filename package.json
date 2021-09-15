@@ -1,6 +1,6 @@
 {
   "name": "@oneserv/phpstan-ruleset",
-  "version": "1.3.0",
+  "version": "0.12.0",
   "description": "An opinionated ruleset for PHPStan to enforce Oneserv Coding Standards.",
   "scripts": {
     "release": "standard-version"
