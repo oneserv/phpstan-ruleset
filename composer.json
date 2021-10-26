@@ -36,7 +36,7 @@
     "phpstan/phpstan-deprecation-rules": "^0.12.6",
     "roave/security-advisories": "dev-latest",
     "phpstan/phpstan-phpunit": "^0.12.22",
-    "oneserv/phpcs-rules": "^1.0",
+    "oneserv/phpcs-rules": "1.4.1",
     "dg/bypass-finals": "^1.3",
     "thecodingmachine/phpstan-safe-rule": "^1.0",
     "madewithlove/license-checker": "^0.10.0"
