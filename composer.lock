@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f6600dd4f359c96ed1c5755fbbb8e71",
+    "content-hash": "a35eb381090e21132e0e60f4b5682807",
     "packages": [
         {
             "name": "doctrine/instantiator",
@@ -2652,26 +2652,29 @@
         },
         {
             "name": "madewithlove/license-checker",
-            "version": "v0.10.0",
+            "version": "v1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/madewithlove/license-checker-php.git",
-                "reference": "53837b3f53a207d5b0ef7c86ef3668f2f5005a05"
+                "reference": "e184e3120f06cc89e0255faaeae63446829c7be8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/madewithlove/license-checker-php/zipball/53837b3f53a207d5b0ef7c86ef3668f2f5005a05",
-                "reference": "53837b3f53a207d5b0ef7c86ef3668f2f5005a05",
+                "url": "https://api.github.com/repos/madewithlove/license-checker-php/zipball/e184e3120f06cc89e0255faaeae63446829c7be8",
+                "reference": "e184e3120f06cc89e0255faaeae63446829c7be8",
                 "shasum": ""
             },
             "require": {
+                "php": "^8.0",
                 "symfony/console": "^4.0 || ^5.0",
                 "symfony/process": "^4.0 || ^5.0",
                 "symfony/yaml": "^4.0 || ^5.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8.5 || ^9.0",
-                "vimeo/psalm": "^3.9"
+                "friendsofphp/php-cs-fixer": "^2.18",
+                "phpunit/phpunit": "^9.5",
+                "psalm/plugin-phpunit": "^0.15.1",
+                "vimeo/psalm": "^4.4"
             },
             "bin": [
                 "bin/license-checker"
@@ -2695,9 +2698,9 @@
             "description": "CLI tool to verify allowed licenses for composer dependencies",
             "support": {
                 "issues": "https://github.com/madewithlove/license-checker-php/issues",
-                "source": "https://github.com/madewithlove/license-checker-php/tree/v0.10.0"
+                "source": "https://github.com/madewithlove/license-checker-php/tree/v1.1"
             },
-            "time": "2020-06-11T11:00:51+00:00"
+            "time": "2021-04-26T19:08:28+00:00"
         },
         {
             "name": "oneserv/phpcs-rules",
