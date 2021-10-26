@@ -23,7 +23,7 @@
   "minimum-stability": "stable",
   "require": {
     "php": "^7.4|^8.0",
-    "phpstan/phpstan": "^0.12",
+    "phpstan/phpstan": "0.12.99",
     "symfony/polyfill-php80": "^1",
     "phpunit/phpunit": "^9",
     "thecodingmachine/safe": "^1"
