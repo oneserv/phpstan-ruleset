@@ -24,7 +24,7 @@
   "require": {
     "php": "^7.4|^8.0",
     "phpstan/phpstan": "^0.12",
-    "symfony/polyfill-php80": "^1",
+    "symfony/polyfill-php80": "1.23.1",
     "phpunit/phpunit": "^9",
     "thecodingmachine/safe": "^1"
   },
