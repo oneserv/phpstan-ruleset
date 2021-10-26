@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/oneserv/phpstan-ruleset#readme",
   "devDependencies": {
-    "standard-version": "^9.3.1"
+    "standard-version": "9.3.2"
   },
   "standard-version": {
     "types": [
