@@ -33,7 +33,7 @@
     "phpstan/phpstan-strict-rules": "^0.12.11",
     "phpmd/phpmd": "^2.10",
     "ergebnis/phpstan-rules": "^0.15.3",
-    "phpstan/phpstan-deprecation-rules": "^0.12.6",
+    "phpstan/phpstan-deprecation-rules": "1.0.0",
     "roave/security-advisories": "dev-latest",
     "phpstan/phpstan-phpunit": "^0.12.22",
     "oneserv/phpcs-rules": "^1.0",
