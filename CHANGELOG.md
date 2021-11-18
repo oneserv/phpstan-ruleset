@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/oneserv/phpstan-ruleset/compare/v0.12.1...v1.0.0) (2021-11-18)
+
+### Features
+
+* update to phpstan
+  1.0.0 ([#28](https://github.com/oneserv/phpstan-ruleset/issues/28)) ([228b716](https://github.com/oneserv/phpstan-ruleset/commit/228b7162757af26b698e6c2befb2d6747dc4e7da))
+
 ### [0.12.1](https://github.com/oneserv/phpstan-ruleset/compare/v0.12.0...v0.12.1) (2021-11-01)
 
 Only contains dependency updates.
