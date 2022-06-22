@@ -4,7 +4,7 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "ba07390a232ab0dc2619d250e4e35b3e",
+  "content-hash": "186aef467892d92180c75a64bfe93ec0",
   "packages": [
     {
       "name": "phpstan/phpstan",
@@ -868,23 +868,23 @@
     },
     {
       "name": "oneserv/phpcs-rules",
-      "version": "v1.4.2",
+      "version": "v2.0.0",
       "source": {
         "type": "git",
         "url": "https://github.com/oneserv/phpcs-rules.git",
-        "reference": "c55eff425391cdec59ec0eb2b784414512a97a62"
+        "reference": "f4bdbb90289267e7c13cfaf989adbfebc17041ae"
       },
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/oneserv/phpcs-rules/zipball/c55eff425391cdec59ec0eb2b784414512a97a62",
-        "reference": "c55eff425391cdec59ec0eb2b784414512a97a62",
+        "url": "https://api.github.com/repos/oneserv/phpcs-rules/zipball/f4bdbb90289267e7c13cfaf989adbfebc17041ae",
+        "reference": "f4bdbb90289267e7c13cfaf989adbfebc17041ae",
         "shasum": ""
       },
       "require": {
         "dealerdirect/phpcodesniffer-composer-installer": "0.*",
         "php": "^7.4|^8.0",
         "phpcompatibility/php-compatibility": "^9.3",
-        "squizlabs/php_codesniffer": "^3.6"
+        "squizlabs/php_codesniffer": "^3.7"
       },
       "require-dev": {
         "madewithlove/license-checker": "^0.10.0",
@@ -910,9 +910,9 @@
       ],
       "support": {
         "issues": "https://github.com/oneserv/phpcs-rules/issues",
-        "source": "https://github.com/oneserv/phpcs-rules/tree/v1.4.2"
+        "source": "https://github.com/oneserv/phpcs-rules/tree/v2.0.0"
       },
-      "time": "2021-11-01T12:08:01+00:00"
+      "time": "2022-06-22T11:10:37+00:00"
     },
     {
       "name": "pdepend/pdepend",
