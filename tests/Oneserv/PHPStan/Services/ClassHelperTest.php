@@ -50,7 +50,6 @@ final class ClassHelperTest extends TestCase
     public function testShouldClassBeAnalysedShouldReturnFalseClassWithEmptyNameSpacedName(): void
     {
         $this->nodeMock->expects(self::once())->method('isAnonymous')->willReturn(false);
-        /** @phpstan-ignore-next-line */
         $this->nodeMock->namespacedName = null;
 
         self::assertFalse($this->classHelper->shouldClassBeAnalysed($this->nodeMock));
