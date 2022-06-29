@@ -21,7 +21,7 @@ use function Safe\sprintf;
  * @see \Tests\Oneserv\PHPStan\Rules\Classes\ClassNameMustBeFirstInClassDocumentationRuleTest
  * @implements Rule<Class_>
  */
-final class ClassNameMustBeFirstInClassDocumentationRule implements Rule
+class ClassNameMustBeFirstInClassDocumentationRule implements Rule
 {
     private ClassHelper $classHelper;
 

@@ -11,3 +11,5 @@ parameters:
     ignoreErrors:
     # NoExtendsRule
     - '#Class .* is not allowed to extend "PHPStan\\Testing\\RuleTestCase"#'
+    # FinalRule cannot be used with infection php
+    - '#Class .* is neither abstract nor final#'

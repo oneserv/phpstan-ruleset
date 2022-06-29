@@ -13,7 +13,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @see DocCommentHelper
  */
-final class DocCommentHelperTest extends TestCase
+class DocCommentHelperTest extends TestCase
 {
     private DocCommentHelper $docCommentHelper;
 

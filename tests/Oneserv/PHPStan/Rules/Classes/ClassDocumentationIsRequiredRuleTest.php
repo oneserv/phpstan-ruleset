@@ -16,7 +16,7 @@ use PHPStan\Testing\RuleTestCase;
  * @see ClassDocumentationIsRequiredRule
  * @extends RuleTestCase<ClassDocumentationIsRequiredRule>
  */
-final class ClassDocumentationIsRequiredRuleTest extends RuleTestCase
+class ClassDocumentationIsRequiredRuleTest extends RuleTestCase
 {
     /**
      * @inheritDoc

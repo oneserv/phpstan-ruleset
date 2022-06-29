@@ -14,7 +14,7 @@ use function Safe\preg_replace;
  *
  * @see \Tests\Oneserv\PHPStan\Services\DocCommentHelperTest
  */
-final class DocCommentHelper
+class DocCommentHelper
 {
     /**
      * Removes every whitespace and line breaks from the given doc comment.
