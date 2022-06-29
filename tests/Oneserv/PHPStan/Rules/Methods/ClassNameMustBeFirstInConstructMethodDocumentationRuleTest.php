@@ -16,7 +16,7 @@ use PHPStan\Testing\RuleTestCase;
  * @see ClassNameMustBeFirstInConstructMethodDocumentationRule
  * @extends RuleTestCase<ClassNameMustBeFirstInConstructMethodDocumentationRule>
  */
-final class ClassNameMustBeFirstInConstructMethodDocumentationRuleTest extends RuleTestCase
+class ClassNameMustBeFirstInConstructMethodDocumentationRuleTest extends RuleTestCase
 {
     /**
      * @inheritDoc

@@ -15,7 +15,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @see ClassHelper
  */
-final class ClassHelperTest extends TestCase
+class ClassHelperTest extends TestCase
 {
     /** @var MockObject&Class_ */
     private MockObject $nodeMock;

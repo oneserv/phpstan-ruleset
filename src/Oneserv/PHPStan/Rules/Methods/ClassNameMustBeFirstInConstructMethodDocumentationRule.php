@@ -21,7 +21,7 @@ use function Safe\sprintf;
  * @implements Rule<ClassMethod>
  * @see \Tests\Oneserv\PHPStan\Rules\Methods\ClassNameMustBeFirstInConstructMethodDocumentationRuleTest
  */
-final class ClassNameMustBeFirstInConstructMethodDocumentationRule implements Rule
+class ClassNameMustBeFirstInConstructMethodDocumentationRule implements Rule
 {
     private ClassHelper $classHelper;
 

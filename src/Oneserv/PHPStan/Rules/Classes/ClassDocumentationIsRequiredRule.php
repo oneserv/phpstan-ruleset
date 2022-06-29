@@ -21,7 +21,7 @@ use function Safe\sprintf;
  * @see \Tests\Oneserv\PHPStan\Rules\Classes\ClassDocumentationIsRequiredRuleTest
  * @implements Rule<Class_>
  */
-final class ClassDocumentationIsRequiredRule implements Rule
+class ClassDocumentationIsRequiredRule implements Rule
 {
     private ClassHelper $classHelper;
 

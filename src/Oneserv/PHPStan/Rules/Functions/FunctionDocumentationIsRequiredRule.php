@@ -20,7 +20,7 @@ use function Safe\sprintf;
  * @implements Rule<Function_>
  * @see \Tests\Oneserv\PHPStan\Rules\Functions\FunctionDocumentationIsRequiredRuleTest
  */
-final class FunctionDocumentationIsRequiredRule implements Rule
+class FunctionDocumentationIsRequiredRule implements Rule
 {
     private DocCommentHelper $docCommentHelper;
 

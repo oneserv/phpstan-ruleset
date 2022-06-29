@@ -11,7 +11,7 @@ use PhpParser\Node\Stmt\Class_;
  *
  * @see \Tests\Oneserv\PHPStan\Services\ClassHelperTest
  */
-final class ClassHelper
+class ClassHelper
 {
     /**
      * @param Class_ $node

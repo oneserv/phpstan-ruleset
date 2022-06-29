@@ -20,7 +20,7 @@ use function Safe\sprintf;
  * @implements Rule<ClassMethod>
  * @see \Tests\Oneserv\PHPStan\Rules\Methods\MethodDocumentationIsRequiredRuleTest
  */
-final class MethodDocumentationIsRequiredRule implements Rule
+class MethodDocumentationIsRequiredRule implements Rule
 {
     private DocCommentHelper $docCommentHelper;
 
