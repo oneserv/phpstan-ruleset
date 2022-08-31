@@ -11,9 +11,6 @@ use PhpParser\Node\Stmt\ClassMethod;
 use PHPStan\Analyser\Scope;
 use PHPStan\Rules\Rule;
 use PHPStan\ShouldNotHappenException;
-use Safe\Exceptions\StringsException;
-
-use function Safe\sprintf;
 
 /**
  * Class ClassNameMustBeFirstInConstructMethodDocumentationRule
@@ -23,20 +20,16 @@ use function Safe\sprintf;
  */
 class ClassNameMustBeFirstInConstructMethodDocumentationRule implements Rule
 {
-    private ClassHelper $classHelper;
-
-    private DocCommentHelper $docCommentHelper;
-
     /**
      * ClassNameMustBeFirstInConstructMethodDocumentationRule constructor.
      *
      * @param ClassHelper $classHelper
      * @param DocCommentHelper $docCommentHelper
      */
-    public function __construct(ClassHelper $classHelper, DocCommentHelper $docCommentHelper)
-    {
-        $this->classHelper = $classHelper;
-        $this->docCommentHelper = $docCommentHelper;
+    public function __construct(
+        private readonly ClassHelper $classHelper,
+        private readonly DocCommentHelper $docCommentHelper
+    ) {
     }
 
     /**
@@ -68,17 +61,13 @@ class ClassNameMustBeFirstInConstructMethodDocumentationRule implements Rule
         $docComment = (string)$node->getDocComment();
         $docComment = $this->docCommentHelper->cleanUpDocComment($docComment);
         if (!str_starts_with($docComment, '/***' . $className . 'constructor.')) {
-            try {
-                return [
-                    sprintf(
-                        'The doc comment of the __construct method of class %s must start with "%s constructor.".',
-                        $className,
-                        $className,
-                    ),
-                ];
-            } catch (StringsException $exception) {
-                throw new ShouldNotHappenException();
-            }
+            return [
+                sprintf(
+                    'The doc comment of the __construct method of class %s must start with "%s constructor.".',
+                    $className,
+                    $className,
+                ),
+            ];
         }
 
         return [];

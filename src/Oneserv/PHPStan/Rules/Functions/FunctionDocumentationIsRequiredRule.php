@@ -10,9 +10,6 @@ use PhpParser\Node\Stmt\Function_;
 use PHPStan\Analyser\Scope;
 use PHPStan\Rules\Rule;
 use PHPStan\ShouldNotHappenException;
-use Safe\Exceptions\StringsException;
-
-use function Safe\sprintf;
 
 /**
  * Class FunctionDocumentationIsRequiredRule
@@ -22,16 +19,13 @@ use function Safe\sprintf;
  */
 class FunctionDocumentationIsRequiredRule implements Rule
 {
-    private DocCommentHelper $docCommentHelper;
-
     /**
      * FunctionDocumentationIsRequiredRule constructor.
      *
      * @param DocCommentHelper $docCommentHelper
      */
-    public function __construct(DocCommentHelper $docCommentHelper)
+    public function __construct(private readonly DocCommentHelper $docCommentHelper)
     {
-        $this->docCommentHelper = $docCommentHelper;
     }
 
     /**
@@ -53,16 +47,12 @@ class FunctionDocumentationIsRequiredRule implements Rule
         $docComment = $this->docCommentHelper->removeCommentDelimiters($docComment);
         $docComment = $this->docCommentHelper->cleanUpDocComment($docComment);
         if ($docComment === '') {
-            try {
-                return [
-                    sprintf(
-                        'Function %s has no/an empty doc comment.',
-                        $node->name->name
-                    ),
-                ];
-            } catch (StringsException $exception) {
-                throw new ShouldNotHappenException();
-            }
+            return [
+                sprintf(
+                    'Function %s has no/an empty doc comment.',
+                    $node->name->name
+                ),
+            ];
         }
         return [];
     }
