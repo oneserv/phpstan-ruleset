@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/oneserv/phpstan-ruleset/compare/v1.0.1...v2.0.0) (2022-08-31)
+
+### ⚠ BREAKING CHANGES
+
+* **general:** update to php 8 (#31)
+
+### Features
+
+* **general:** update to php
+  8 ([#31](https://github.com/oneserv/phpstan-ruleset/issues/31)) ([3e1c0f2](https://github.com/oneserv/phpstan-ruleset/commit/3e1c0f295e5f2832496f0f3b6562940396784f96))
+
+### Removals
+
+* **general:** final
+  classes ([#30](https://github.com/oneserv/phpstan-ruleset/issues/30)) ([a6c9db7](https://github.com/oneserv/phpstan-ruleset/commit/a6c9db702675ab874b90cae56a89415f2c624cb3))
+
 ### [1.0.1](https://github.com/oneserv/phpstan-ruleset/compare/v1.0.0...v1.0.1) (2022-06-22)
 
 Only contains dependency updates.
