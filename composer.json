@@ -22,10 +22,9 @@
   ],
   "minimum-stability": "stable",
   "require": {
-    "php": "^7.4|^8.0",
+    "php": "^8.1",
     "phpstan/phpstan": "^1.0.0",
-    "symfony/polyfill-php80": "^1",
-    "thecodingmachine/safe": "^1"
+    "thecodingmachine/safe": "^2"
   },
   "require-dev": {
     "phpstan/extension-installer": "^1.1",
@@ -37,7 +36,7 @@
     "phpstan/phpstan-phpunit": "^1.0.0",
     "oneserv/phpcs-rules": "^2.0",
     "thecodingmachine/phpstan-safe-rule": "^1.1.0",
-    "madewithlove/license-checker": "^0.10.0",
+    "madewithlove/license-checker": "^1.4.0",
     "phpunit/phpunit": "^9.5"
   },
   "extra": {

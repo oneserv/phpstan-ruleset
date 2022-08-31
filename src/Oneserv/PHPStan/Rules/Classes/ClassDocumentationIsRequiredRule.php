@@ -11,9 +11,6 @@ use PhpParser\Node\Stmt\Class_;
 use PHPStan\Analyser\Scope;
 use PHPStan\Rules\Rule;
 use PHPStan\ShouldNotHappenException;
-use Safe\Exceptions\StringsException;
-
-use function Safe\sprintf;
 
 /**
  * Class ClassDocumentationIsRequiredRule
@@ -23,20 +20,16 @@ use function Safe\sprintf;
  */
 class ClassDocumentationIsRequiredRule implements Rule
 {
-    private ClassHelper $classHelper;
-
-    private DocCommentHelper $docCommentHelper;
-
     /**
      * ClassDocumentationIsRequiredRule constructor.
      *
      * @param ClassHelper $classHelper
      * @param DocCommentHelper $docCommentHelper
      */
-    public function __construct(ClassHelper $classHelper, DocCommentHelper $docCommentHelper)
-    {
-        $this->classHelper = $classHelper;
-        $this->docCommentHelper = $docCommentHelper;
+    public function __construct(
+        private readonly ClassHelper $classHelper,
+        private readonly DocCommentHelper $docCommentHelper
+    ) {
     }
 
     /**
@@ -67,16 +60,12 @@ class ClassDocumentationIsRequiredRule implements Rule
         $docComment = $this->docCommentHelper->cleanUpDocComment($docComment);
 
         if ($docComment === '') {
-            try {
-                return [
-                    sprintf(
-                        'Class %s has no/an empty doc comment.',
-                        $node->name->name
-                    ),
-                ];
-            } catch (StringsException $exception) {
-                throw new ShouldNotHappenException();
-            }
+            return [
+                sprintf(
+                    'Class %s has no/an empty doc comment.',
+                    $node->name->name
+                ),
+            ];
         }
         return [];
     }

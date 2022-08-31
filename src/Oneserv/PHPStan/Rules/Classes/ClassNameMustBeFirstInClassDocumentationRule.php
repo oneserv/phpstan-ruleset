@@ -11,9 +11,6 @@ use PhpParser\Node\Stmt\Class_;
 use PHPStan\Analyser\Scope;
 use PHPStan\Rules\Rule;
 use PHPStan\ShouldNotHappenException;
-use Safe\Exceptions\StringsException;
-
-use function Safe\sprintf;
 
 /**
  * Class ClassNameMustBeFirstInClassDocumentationRule
@@ -23,20 +20,16 @@ use function Safe\sprintf;
  */
 class ClassNameMustBeFirstInClassDocumentationRule implements Rule
 {
-    private ClassHelper $classHelper;
-
-    private DocCommentHelper $docCommentHelper;
-
     /**
      * ClassNameMustBeFirstInClassDocumentationRule constructor.
      *
      * @param ClassHelper $classHelper
      * @param DocCommentHelper $docCommentHelper
      */
-    public function __construct(ClassHelper $classHelper, DocCommentHelper $docCommentHelper)
-    {
-        $this->classHelper = $classHelper;
-        $this->docCommentHelper = $docCommentHelper;
+    public function __construct(
+        private readonly ClassHelper $classHelper,
+        private readonly DocCommentHelper $docCommentHelper
+    ) {
     }
 
     /**
@@ -67,17 +60,13 @@ class ClassNameMustBeFirstInClassDocumentationRule implements Rule
         $docComment = (string)$node->getDocComment();
         $docComment = $this->docCommentHelper->cleanUpDocComment($docComment);
         if (!str_starts_with($docComment, "/***Class$className")) {
-            try {
-                return [
-                    sprintf(
-                        "The doc comment of class %s must start with \"Class %s\".",
-                        $className,
-                        $className,
-                    ),
-                ];
-            } catch (StringsException $exception) {
-                throw new ShouldNotHappenException();
-            }
+            return [
+                sprintf(
+                    "The doc comment of class %s must start with \"Class %s\".",
+                    $className,
+                    $className,
+                ),
+            ];
         }
 
         return [];
